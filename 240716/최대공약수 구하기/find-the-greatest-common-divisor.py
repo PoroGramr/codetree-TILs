@@ -4,4 +4,4 @@ def gcd(a, b):
             return i
 
 a,b = map(int, input().split())
-gcd(a,b)
+print(gcd(a,b))
