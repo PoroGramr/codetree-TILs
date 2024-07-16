@@ -16,7 +16,10 @@ def checkPrime(a,b):
     sum = 0
     for i in range(a,b+1):
         if isPrime(i):
-            sum += i
+            if i == 1:
+                return 0
+            else:
+                sum += i
     return sum
 
 a ,b = map(int, input().split())
