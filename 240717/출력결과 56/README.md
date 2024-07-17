@@ -5,7 +5,8 @@
 |[Novice Mid / 함수 / 값을 반환하는 함수](https://www.codetree.ai/missions?missionId=5)|30xp|![보통][medium]|
 
 
-
+n이 3의 배수일때만 성립 따라서
+3,6,9,12 총 4개
 
 
 
