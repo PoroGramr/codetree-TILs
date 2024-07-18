@@ -31,17 +31,16 @@ def checkYoonYear(y):
             return False
         return True
     return False
+
 def checkWhether(M):
     if M >= 3 and M <= 5:
         return "Spring"
-    elif M <= 6 and M >= 8:
+    elif M >= 6 and M <= 8:
         return "Summer"
     elif M <= 9 and M >= 11:
         return "Fall"
     else:
         return"Winter"
-
-
 
 
 Y,M,D = map(int,input().split())
