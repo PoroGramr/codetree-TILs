@@ -37,7 +37,7 @@ def checkWhether(M):
         return "Spring"
     elif M >= 6 and M <= 8:
         return "Summer"
-    elif M <= 9 and M >= 11:
+    elif M >= 9 and M <= 11:
         return "Fall"
     else:
         return"Winter"
