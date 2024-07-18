@@ -48,5 +48,6 @@ Y,M,D = map(int,input().split())
 answer = ""
 if checkDay(Y,M,D):
     answer = checkWhether(M)
-
+else:
+    answer = -1
 print(answer)
