@@ -6,5 +6,5 @@ def check(a,b):
         print(a + 10, end = " ")
         print(b * 2)
 
-a,b = int(input())
+a,b = map(int ,input().split())
 check(a,b)
