@@ -2,7 +2,7 @@ def chcek(data):
     data = list(data)
     count = []
     for i in data:
-        if i in data:
+        if i in count:
             print("Yes")
             return
         else:
