@@ -1,12 +1,12 @@
 def chcek(data):
-    count = []
     data = list(data)
-    for i in range(len(data)):
-        if data[i] in count:
+    count = []
+    for i in data:
+        if i in data:
             print("Yes")
             return
         else:
-            count.append(data[i])
+            count.append(i)
 
     print("No")
     return 
