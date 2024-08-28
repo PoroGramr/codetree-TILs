@@ -6,12 +6,12 @@ def check(a,b,c):
     
     dayMin = a * 24 * 60
     hourMin = b * 60
-    totalMin = dayMin + hourmin + c
+    totalMin = dayMin + hourMin + c
 
     pinMin = (11 * 24 * 60) + (11 * 60) + 11
 
     answer = totalMin - pinMin
-    
+
     return answer
 
 
