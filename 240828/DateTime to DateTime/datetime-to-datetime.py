@@ -3,8 +3,9 @@ def check(a,b,c):
     # 예외 입력 리턴
     if a < 11:
         return "-1"
-    if a == 11 and b < 11 and c < 11:
+    if a == 11 and b < 11:
         return "-1"
+    
     
     # 입력된 날짜의 분의 합을 계산(기준은 11월 1일 00시 00분)
     dayMin = a * 24 * 60    # 일자를 기준으로 분 계산
