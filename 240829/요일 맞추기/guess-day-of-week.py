@@ -1,4 +1,4 @@
-monthDays = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]  #각 월별 일수를 저장해둔 리스트
+monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]  #각 월별 일수를 저장해둔 리스트
 dayWeek = {"Mon" : 0, "Tue" : 1, "Wed" : 2, "Thu" : 3, "Fri" : 4, "Sat" : 5, "Sun" : 6}
 dayWeekReverse = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 
