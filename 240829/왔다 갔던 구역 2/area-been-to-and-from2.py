@@ -1,7 +1,7 @@
-data = [0] * 100
+data = [0] * 1000
 
 n = int(input())
-currentX = 49
+currentX = 499
 for _ in range(n):
     x, point = map(str, input().split())
     x = int(x)
