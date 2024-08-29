@@ -34,7 +34,7 @@ dayPercent = dayDifference % 7
 
 secondDayWeek = dayWeekReverse[dayPercent]
 answer = 0
-if inputDay >= dayPercent:
+if inputDay < dayPercent:
     answer += 1
 
 answer += dayDivide
