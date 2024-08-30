@@ -17,10 +17,10 @@ for문을 돌며 현재 타일의 색을 바꿔줌
 
 """
 
-TILE = 10_000 # 타일의 개수는 1,000,000개로 설정
-                 # 테스트 케이스에서 1,000,000정도여야 통과가 가능하기 때문
+TILE = 10_000 # 타일의 개수는 10,000개로 설정
+               
 
-currentTile = [0] * TILE # (0 : 칠해지지 않음, 1 : 흰색, 2: 검정, 3: 회색)
+currentTile = [0] * TILE # (0 : 회색, 1 : 흰색, 2: 검정)
 
 
 tileX = 4_999 # 현재 타일의 좌표
@@ -36,7 +36,8 @@ for i in range(n):
         for j in range(move):
             # 현재 타일의 색을 검정으로 바꿈
             currentTile[tileX + j] = 2
-        # 현재 타일 정보 반영
+
+        # 현재 타일 좌표 정보 반영
         tileX += move - 1
 
     
@@ -45,15 +46,9 @@ for i in range(n):
         for j in range(move):
             # 현재 타일의 색을 흰색으로 바꿈
             currentTile[tileX - j] = 1
-         # 현재 타일 정보 반영
+
+         # 현재 타일 좌표 정보 반영
         tileX -= move - 1
-
-    
-    # 결과 테스트용 for문
-    # for i in range(495, 515):
-    #     print(i - 499 , ":", currentTile[i], ",", end="")
-    # print()
-
 
 # 각 색별로 카운트
 white, black = 0 , 0
