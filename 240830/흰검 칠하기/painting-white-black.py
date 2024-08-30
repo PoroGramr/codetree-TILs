@@ -26,7 +26,7 @@ blackTile = [0] * N
 
 """
 
-TILE = 10000 # 타일의 개수는 1,000개로 설정
+TILE = 1000000 # 타일의 개수는 1,000개로 설정
 
 currentTile = [0] * TILE # (0 : 칠해지지 않음, 1 : 흰색, 2: 검정, 3: 회색)
 
@@ -34,7 +34,7 @@ whiteTile = [0] * TILE
 
 blackTile = [0] * TILE
 
-tileX = 4999 # 현재 타일의 좌표
+tileX = 499999 # 현재 타일의 좌표
 
 n = int(input())
 
