@@ -27,7 +27,7 @@ for i in range(n):
     data.append(x)
 
 answer = -1
-answerCheck = 0
+
 conCheck = 0
 
 for i in range(n): # 세로 길이 1부터 시작
@@ -35,22 +35,20 @@ for i in range(n): # 세로 길이 1부터 시작
         for a in range(0,n - i): # 시작점 y
             for b in range(0,m - k): # 시작점 x
                 conCheck = 0
-                for ax in range (a, a + i + 1):
-                    for bx in range(b, b+k + 1):
-                        if data[ax][bx] < 0:
-                            conCheck = 1
+                for ax in range (a, a + i + 1): # y값 a ~ a+i 를 탐색
+                    for bx in range(b, b+k + 1): # x값 b ~ b+ k를 탐색
+                        if data[ax][bx] <= 0: # 만약 음수가 있다면
+                            conCheck = 1 # for문 2개를 한번에 멈추는 건 불가능 하기에 변수로 2개를 멈춤
                             break
     
                 if conCheck == 0:
                     # print(a,b, end ="")
                     # print("부터",a+i, b+k, "까지")
                     # print(i + 1, " *", k + 1)
-                    answerCheck += 1
                     answer = max(answer , (i + 1) * (k+1))      
                     
 
                 # print(a,b, end ="")
                 # print("부터",a+i, b+k, "까지")
-if answerCheck == 0:
-    answer = -1
+
 print(answer)
