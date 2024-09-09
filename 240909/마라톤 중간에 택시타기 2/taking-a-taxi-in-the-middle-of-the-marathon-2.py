@@ -24,6 +24,7 @@ for i in range(n):
 
 # [[0, 0], [8, 3], [11, -1], [10, 0]]
 
+# 파이썬에서 가능한 최대 정수값 지정
 minLen = sys.maxsize
 
 # 첫번째 지점과 마지막 지점 제외
@@ -35,12 +36,16 @@ for k in range(1, n-1):
         if j == k:
             continue
         
+        # 만약 이전 체크포인트가 스킵된 체크 포인트라면
         if j-1 == k:
             currentMin += abs(xyData[j-2][0] - xyData[j][0]) + abs(xyData[j-2][1] - xyData[j][1])
         
+        # 일반적인 이전 체크포인트와의 거리 계산
         else:
             currentMin += abs(xyData[j-1][0] - xyData[j][0]) + abs(xyData[j-1][1] - xyData[j][1])
 
+    # 최소값을 계속해서 비교
     minLen = min(minLen, currentMin)
-    
+
+# 출력
 print(minLen)
