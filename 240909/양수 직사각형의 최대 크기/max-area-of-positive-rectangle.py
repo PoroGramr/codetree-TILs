@@ -27,7 +27,7 @@ for i in range(n):
     data.append(x)
 
 answer = -1
-
+answerCheck = 0
 conCheck = 0
 
 for i in range(n): # 세로 길이 1부터 시작
@@ -45,9 +45,12 @@ for i in range(n): # 세로 길이 1부터 시작
                     # print(a,b, end ="")
                     # print("부터",a+i, b+k, "까지")
                     # print(i + 1, " *", k + 1)
-                    answer = max( answer , (i + 1) * (k+1)      )      
+                    answerCheck += 1
+                    answer = max(answer , (i + 1) * (k+1))      
                     
 
                 # print(a,b, end ="")
                 # print("부터",a+i, b+k, "까지")
+if answerCheck == 0:
+    answer = -1
 print(answer)
