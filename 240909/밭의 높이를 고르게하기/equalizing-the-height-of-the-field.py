@@ -29,14 +29,22 @@ N,H,T = map(int, input().split())
 
 data = list(map(int, input().split()))
 
+# 최소 비용 계산을 위한 최대값 저장
 minCost = sys.maxsize
 
 for i in range(len(data) - (T-1)):# i부터 연속으로 H가 T번 나오게 할때 드는 비용 계산
+    # 총 비용 계산 전 초기값 설정
     cost = 0
+
+    # T번연속으로 나와야 하기에 T번의 반복
     for k in range(T):
+
+        # 만약 해당 높이가 H와 다르다면
         if data[i + k] != H:
+            # 높이의 차를 바탕으로 비용 계산
             cost += abs(data[i + k] - H)
     
+    # 최소 비용 계산 후 업데이트
     minCost = min(cost, minCost)
 
 print(minCost)
