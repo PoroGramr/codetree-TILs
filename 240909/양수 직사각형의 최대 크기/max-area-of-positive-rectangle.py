@@ -26,7 +26,7 @@ for i in range(n):
     x = list(map(int, input().split()))
     data.append(x)
 
-answer = 0
+answer = -1
 
 conCheck = 0
 
