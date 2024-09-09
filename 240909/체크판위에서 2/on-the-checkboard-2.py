@@ -9,7 +9,7 @@ answer = 0
 
 for i in range(1,R): # 0,0은 이미 밟고 시작하기에 1부터 시작
     for k in range(1, C):
-        for j in range(i + 1, R -1):
+        for j in range(i + 1, R - 1): # R,C는 도착 지점이기에 제외
             for a in range(k + 1, C - 1):
                  if data[0][0] != data[i][k] and \
                    data[i][k] != data[j][a] and \
