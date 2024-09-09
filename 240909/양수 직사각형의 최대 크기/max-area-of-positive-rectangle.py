@@ -41,7 +41,7 @@ for i in range(n): # 세로 길이 1부터 시작
                             conCheck = 1
                             break
                     if conCheck == 1:
-                        continue
+                        break
                 if conCheck == 0:
                     answer =((a +i) - a) * ((b+k+1) - b)            
                     
