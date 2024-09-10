@@ -23,6 +23,8 @@ data = []
 for _ in range(N):
     data.append(list(map(int,input().split())))
 
+data.sort(key=lambda x : (x[0] + x[1]))
+
 answer = 0
 for i in range(len(data)):
     cost = 0
