@@ -23,16 +23,13 @@ answer = 0
 for i in range(1, len(data)):
     count = 0
 
-    # 리스트 복사 
-    cacData = data[:]
-
     # 탐색할 인덱스
     chkIndex = i
 
     # 탐색을 시작할 원소 i 를 바탕으로 m번 탐색
     for k in range(m):
-        count += cacData[i]
-        i = cacData[i]
+        count += data[i]
+        i = data[i]
     answer = max(answer,count)
 
 print(answer)
