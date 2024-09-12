@@ -1,5 +1,7 @@
 data = list(map(int, input().split()))
 
+data.sort()
+
 if data[0] + 1 == data[1] and data[1] + 1 == data[2]:
     print(0)
 
