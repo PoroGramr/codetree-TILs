@@ -26,11 +26,10 @@ for k in range(1,n):
                 count += 1
             else:
                 if count >= 1:
-                    compare.append(count+1)
+                    compare.append(count)
                 count = 0
+                
         # 0이 연속되는 횟수중 가장 적은 횟수(가장 가까운 거리)를 추출
-        # print(copySeat)
-        # print(compare)
         compareMin = min(compare)
         
         # 이전 반복문에서의 결과들과 비교
