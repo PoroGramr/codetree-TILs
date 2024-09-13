@@ -15,7 +15,7 @@ n = int(input())
 
 count = 0
 scores = [0, 0] # [A, B] 점수 카운트
-curWin = ""
+
 exWinner = []
 for i in range(n):
 
@@ -27,6 +27,8 @@ for i in range(n):
             scores[0] += int(score)
         elif stu == "B":
             scores[1] += int(score)
+        
+        # 만약 점수가 0씩 오르는 경우는 스킵
         if int(score) != 0:
             count += 1
 
@@ -45,25 +47,30 @@ for i in range(n):
 
         elif stu == "B":
             scores[1] += int(score)
-            
+
         if int(score) == 0:
             continue
         
-
+        # A가 점수가 더 높은 경우
         if scores[0] > scores[1]:
+            # 이전 우슬자가 A라면 스킵
             if len(exWinner) == 1:
                 if exWinner[0] == "A":
                     continue
+
+                # 우승자가 달라졌을 경우 카운트 +1 밑 우승자 업데이트
                 else:
                     count += 1
                     exWinner.pop()
                     exWinner.append("A")
+
+            # 이전 우승자가 2명이였을 경우
             if len(exWinner) == 2:
                 count += 1
                 exWinner.pop()
                 exWinner.pop()
                 exWinner.append("A")
-
+        # B가 점수가 더 높은 경우
         elif scores[0] < scores[1]:
             if len(exWinner) == 1:
                 if exWinner[0] == "B":
@@ -78,6 +85,8 @@ for i in range(n):
                 exWinner.pop()
                 exWinner.pop()
                 exWinner.append("B")
+        
+        # 둘의 점수가 같을 경우
         elif scores[0] == scores[1]:
             if len(exWinner) == 1:
                 exWinner.pop()
