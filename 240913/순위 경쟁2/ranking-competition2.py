@@ -27,7 +27,7 @@ for i in range(n):
             scores[0] += int(score)
         elif stu == "B":
             scores[1] += int(score)
-        if score != 0:
+        if int(score) != 0:
             count += 1
 
         if scores[0] > scores[1]:
