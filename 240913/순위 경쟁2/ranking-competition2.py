@@ -45,6 +45,10 @@ for i in range(n):
 
         elif stu == "B":
             scores[1] += int(score)
+            
+        if int(score) == 0:
+            continue
+        
 
         if scores[0] > scores[1]:
             if len(exWinner) == 1:
