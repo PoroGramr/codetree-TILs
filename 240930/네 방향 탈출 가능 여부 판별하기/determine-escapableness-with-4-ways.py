@@ -2,7 +2,7 @@ from collections import deque
 
 def bfs():
     q = deque()
-    v = [([0] * n) for _ in range(m)]
+    v = [([0] * m) for _ in range(n)]
     v[0][0] = 1
     q.append((0,0))
 
@@ -13,8 +13,8 @@ def bfs():
         if (cy,cx) == (n-1, m-1):
             return 1
 
-        for px, py in ((1,0),(-1,0),(0,1),(0,-1)):
-            nx, ny = cx + px, cy + py
+        for py,px in ((1,0),(-1,0),(0,1),(0,-1)):
+            ny, nx =  cy + py, cx + px
 
             if 0 <= nx < m and 0 <= ny < n and data[ny][nx] == 1 and v[ny][nx] == 0:
                 v[nx][ny] = 1
