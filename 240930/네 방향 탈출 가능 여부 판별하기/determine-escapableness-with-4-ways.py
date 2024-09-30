@@ -8,9 +8,9 @@ def bfs():
 
     while q:
         
-        cx,cy = q.popleft()
+        cy,cx = q.popleft()
 
-        if (cx, cy) == (n-1, m-1):
+        if (cy,cx) == (n-1, m-1):
             return 1
 
         for px, py in ((1,0),(-1,0),(0,1),(0,-1)):
