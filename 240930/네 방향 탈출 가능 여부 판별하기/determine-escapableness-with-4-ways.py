@@ -16,9 +16,9 @@ def bfs():
         for px, py in ((1,0),(-1,0),(0,1),(0,-1)):
             nx, ny = cx + px, cy + py
 
-            if 0 <= nx < m and 0 <= ny < n and data[nx][ny] == 1 and v[nx][ny] == 0:
+            if 0 <= nx < m and 0 <= ny < n and data[ny][nx] == 1 and v[ny][nx] == 0:
                 v[nx][ny] = 1
-                q.append((nx,ny))
+                q.append((ny,nx))
     return 0
     
     
