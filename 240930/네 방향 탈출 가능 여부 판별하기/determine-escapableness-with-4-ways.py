@@ -17,13 +17,11 @@ def bfs():
             ny, nx =  cy + py, cx + px
 
             if 0 <= nx < m and 0 <= ny < n and data[ny][nx] == 1 and v[ny][nx] == 0:
-                v[nx][ny] = 1
+                v[ny][nx] = 1
                 q.append((ny,nx))
     return 0
     
     
-
-
 n,m = map(int, input().split())
 
 data = [list(map(int, input().split())) for _ in range(n)]
