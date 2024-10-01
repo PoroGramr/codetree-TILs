@@ -1,6 +1,6 @@
-data = [ 0 for _ in range(1000)]
+data = [ 0 for _ in range(10000)]
 n = int(input())
-cx = 500
+cx = 5000
 for i in range(n):
     x, g = map(str,input().split())
     if g == "R": # 검은색
