@@ -17,7 +17,6 @@ def dfs(y, x, M, N):
 N, M = map(int, input().split())
 data = [list(map(int, input().split())) for _ in range(N)]
 v = [[0 for _ in range(M)] for _ in range(N)]
-v[0][0] = 1  # 시작 지점을 방문 처리
 
 # 탈출 가능한 경로가 있으면 1, 없으면 0 출력
 if dfs(0, 0, N, M):
