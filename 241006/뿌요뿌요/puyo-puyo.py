@@ -1,3 +1,6 @@
+import sys
+sys.setrecursionlimit(10**5)  # 재귀 깊이 제한을 100,000으로 설정
+
 def dfsMax(y,x,i):
     v[y][x] = 1
     count = 1
