@@ -22,11 +22,6 @@ def dfsBomb(y,x,i):
     return count
     
 
-    
-
-
-
-
 N = int(input())
 
 data = [list(map(int,input().split())) for _ in range(N)]
@@ -37,8 +32,9 @@ for i in range(1,100):
     v = [[0 for _ in range(N)] for _ in range(N)]
     for y in range(N):
         for x in range(N):
-            tmp = dfsMax(y,x,i)
-            big = max(big,tmp)
+            if data[y][x] == i and v[y][x] == 0:
+                tmp = dfsMax(y,x,i)
+                big = max(big,tmp)
 
 bombCount = 0
 # 터지게 될 블럭의 숫자
