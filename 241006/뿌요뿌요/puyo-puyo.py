@@ -42,7 +42,8 @@ for i in range(1,100):
     v = [[0 for _ in range(N)] for _ in range(N)]
     for y in range(N):
         for x in range(N):
-            bomb = dfsBomb(y,x,i)
-            if 4 <= bomb:
-                bombCount += 1
+            if data[y][x] == i and v[y][x] == 0:
+                bomb = dfsBomb(y,x,i)
+                if 4 <= bomb:
+                    bombCount += 1
 print(bombCount, big)
