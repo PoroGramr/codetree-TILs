@@ -1,5 +1,5 @@
 import sys
-sys.setrecursionlimit(10**6)  # 재귀 깊이 제한을 1,000,000으로 설정
+sys.setrecursionlimit(10**5)  # 재귀 깊이 제한을 1,000,000으로 설정
 
 
 def dfs(y,x,k):
