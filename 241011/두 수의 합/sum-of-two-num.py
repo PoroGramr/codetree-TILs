@@ -4,7 +4,7 @@ d = dict()
 
 ans = 0
 for elem in data:
-    diff  = k - elem
+    diff = k - elem
 
     if diff in d:
         ans += d[diff]
@@ -12,7 +12,6 @@ for elem in data:
     if elem in d:
         d[elem] += 1
     else:
-        d[elem] = 1
-
+        d[elem]= 1
 
 print(ans)
