@@ -7,8 +7,6 @@ for i in range(n):
     d[i + 1] = com
 
     
-
-
 for _ in range(m):
     com = input()
     if com.isdigit():
