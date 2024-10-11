@@ -9,10 +9,11 @@ for i in range(n):
     
 for _ in range(m):
     com = input()
+
     if com.isdigit():
         com = int(com)
         print(d[com])
     else:
-        for j in range(1,len(d)):
+        for j in range(1,len(d) + 1):
             if d[j] == com:
                 print(j)
