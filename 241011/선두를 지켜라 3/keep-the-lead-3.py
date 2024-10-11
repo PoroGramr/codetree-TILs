@@ -12,6 +12,7 @@ for _ in range(M):
 
 disN = [0] * 1001 # N의 시간별 위치
 disM = [0] * 1001 # M의 시간별 위치
+
 nx = 1
 for k in range(len(dataN)):
     cur = dataN[k]
