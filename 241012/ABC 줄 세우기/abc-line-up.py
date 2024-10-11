@@ -1,22 +1,19 @@
-n = int(input())
-data = list(map(str, input().split()))
-dataS = sorted(data)
+def count_min_swaps(arr):
+    swaps = 0
+    n = len(arr)
 
-ans = 0
-#바꿔줄 인덱스
-for k in range(len(data)):
-    # 해당 인덱스로 가야할 알파벳 찾기
-    for i in range(len(data)):
-        # 만약 data[i]와 dataS[k]가 같다
-        # -> i를 k의 위치로 옮겨야한다
-        if data[i] == dataS[k]:
-            # 위치가 같다면 스킵
-            if i == k:
-                continue
-            # 위치가 같지 않다면 1개씩 앞으로 당긴다
-            else:
-                data[i - 1], data[i] =data[i],data[i - 1]
-                ans += 1 
-    
+    # 버블 정렬을 활용하여 최소 swap 횟수 구하기
+    for i in range(n):
+        for j in range(n - 1):
+            if arr[j] > arr[j + 1]:  # 두 인접한 사람이 순서가 잘못된 경우
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]  # 위치 교환
+                swaps += 1
 
-print(ans)
+    return swaps
+
+# 입력 받기
+n = int(input())  # 사람 수
+arr = input().split()  # 알파벳 순서
+
+# 결과 출력
+print(count_min_swaps(arr))
