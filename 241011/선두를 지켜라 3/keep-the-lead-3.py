@@ -21,7 +21,7 @@ for k in range(len(dataN)):
             disN[nx] += cur[0]
             nx += 1
         else:
-            disN[nx] += disN[nx - 1] + cur[0]
+            disN[nx] += disN[nx - 1]
             nx += 1
 
 mx = 1
