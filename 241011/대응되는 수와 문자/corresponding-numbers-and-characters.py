@@ -1,19 +1,17 @@
 n, m = map(int, input().split())
-
+data = []
 d = dict()
 
 for i in range(n):
-    com = str(input())
-    d[i + 1] = com
+    data.append(input())
 
-    
+for j, elem in enumerate(data):
+    d[elem] = j + 1
+
 for _ in range(m):
     com = input()
 
     if com.isdigit():
-        com = int(com)
-        print(d[com])
+        print(data[int(com) - 1])
     else:
-        for j in range(1,len(d) + 1):
-            if d[j] == com:
-                print(j)
+        print(d[com])
