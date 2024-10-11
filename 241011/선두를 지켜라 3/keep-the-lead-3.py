@@ -10,8 +10,8 @@ for _ in range(M):
     v, t = map(int, input().split())
     dataM.append([v,t])
 
-disN = [0] * 1001 # N의 시간별 위치
-disM = [0] * 1001 # M의 시간별 위치
+disN = [0] * 1002 # N의 시간별 위치
+disM = [0] * 1002 # M의 시간별 위치
 
 nx = 1
 for k in range(len(dataN)):
