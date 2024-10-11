@@ -10,18 +10,19 @@ for _ in range(M):
     v, t = map(int, input().split())
     dataM.append([v,t])
 
-disN = [0] * 1002 # N의 시간별 위치
-disM = [0] * 1002 # M의 시간별 위치
+disN = [0] * 10001 # N의 시간별 위치
+disM = [0] * 10001 # M의 시간별 위치
 
 nx = 1
 for k in range(len(dataN)):
     cur = dataN[k]
+
     for m in range(cur[1]):
         if nx == 1:
             disN[nx] += cur[0]
             nx += 1
         else:
-            disN[nx] += disN[nx - 1]
+            disN[nx] += disN[nx - 1] + cur[0]
             nx += 1
 
 mx = 1
