@@ -1,7 +1,7 @@
 import sys
 
 # 재귀 깊이 제한 해제 또는 증가 (예: 10,000으로 설정)
-sys.setrecursionlimit(10000)
+sys.setrecursionlimit(100000)
 
 
 def dfs(i, res):
