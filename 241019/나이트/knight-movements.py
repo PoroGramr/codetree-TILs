@@ -5,15 +5,19 @@ def bfs(y,x):
     q = deque()
     q.append((y,x))
     count = 0
+
     while q:
         cy, cx = q.popleft()
-        if cy == r2 -1 and cx == c2 - 1:
+
+        if cy == r2 - 1 and cx == c2 - 1:
             return count
+        
         for py, px in ((-1, -2),(-2,-1),(-2,1),(-1,2),(1,-2),(2,-1),(2,1),(1,2)):
             ny, nx = cy + py, cx + py
             if 0 <= ny < n and 0 <= nx < n and (data[ny][nx] == 0 or data[ny][nx] == 1) :
                 q.append((ny,nx))
 
+    return -1
 
 n = int(input())
 
