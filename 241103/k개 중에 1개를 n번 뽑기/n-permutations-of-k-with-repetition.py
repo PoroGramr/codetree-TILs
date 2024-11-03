@@ -3,7 +3,7 @@ data = []
 
 n,m = map(int, input().split())
 
-combinations = product(range(1, m + 1), repeat=n)
+combinations = product(range(1, n + 1), repeat=m)
 
 for s in combinations:
     print(*s)
