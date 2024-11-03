@@ -1,9 +1,9 @@
-from itertools import combinations
+from itertools import product
 data = []
 
 n,m = map(int, input().split())
 
-for s in combinations(n,m):
-    data.append(s)
+combinations = product(range(1, m + 1), repeat=n)
 
-print(len(data))
+for s in combinations:
+    print(*s)
