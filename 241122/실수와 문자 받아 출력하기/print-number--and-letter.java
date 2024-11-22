@@ -11,10 +11,10 @@ public class Main {
         double c = s.nextDouble();
 
         System.out.println(a);
-
-        System.out.println(Math.round(b * 100) / 100.0);
-
-        System.out.println(Math.round(c * 100) / 100.0);
+        b = Math.round(b * 100) / 100.0;
+        System.out.printf("%.2f", b);
+        c = Math.round(c * 100) / 100.0;
+        System.out.printf("%.2f", c);
 
         
     }
