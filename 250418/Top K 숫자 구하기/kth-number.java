@@ -11,6 +11,6 @@ public class Main {
         }
         // Integer[] sorted = Arrays.stream(arr).boxed().toArray(Integer[]::new);
         Arrays.sort(nums);
-        System.out.println(nums[k]);
+        System.out.println(nums[k-1]);
     }
 }
