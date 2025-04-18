@@ -13,13 +13,14 @@ public class Main {
         }
         
         Arrays.sort(a);
-        Arrays.sort[b];
+        Arrays.sort(b);
 
         for(int i = 0; i < n; i++){
             if(a[i] != b[i]){
-                System.out.print("No")
+                System.out.print("No");
+                return;
             }
         }
-        
+        System.out.print("Yes");
     }
 }
