@@ -3,8 +3,6 @@ nums = list(map(int, input().split()))
 
 pick = []
 
-
-
 answer = 0
 
 def check(curNum):
@@ -26,11 +24,13 @@ def calc():
         x = pick[j] - 1
         position[x] += nums[j]
     
+
+
     for point in position:
-        if point >= n - 1:
+        if point >= m - 1:
             tmpAnswer += 1
+
     answer = max(tmpAnswer, answer)
 
-
 check(1)
-print(answer-1)
+print(answer)
