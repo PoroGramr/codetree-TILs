@@ -1,39 +1,26 @@
 n = int(input())
 num = list(map(int, input().split()))
 
-answer = 99999
+answer = float('inf')
 
-def check(curNum, lens):
-    if curNum == lens + 1:
-        calc()
-        return
-    
-    for k in range(1, n-1):
-        tmpMax = max(nums)
-        if k > tmpMax:
-            nums.append(k)
-            check(curNum + 1, lens)
-            nums.pop()
-
-def calc():
+def dfs(pos, depth):
     global answer
 
-    for j in range(1,len(nums)):
-        if nums[j-1] + num[j - 1] >= nums[j]:
-            continue
-        else:
-            return
-    if nums[-1] + num[nums[-1]] >= n - 1:
-        answer = min(answer, len(nums))
+    # 목적지 도착
+    if pos == n - 1:
+        answer = min(answer, depth)
+        return
 
-for i in range(1, n + 1):
-    nums = [0]
+    # 가지치기
+    if depth >= answer:
+        return
 
-    check(1, i)
+    max_jump = num[pos]
+    for step in range(1, max_jump + 1):
+        next_pos = pos + step
+        if next_pos < n:
+            dfs(next_pos, depth + 1)
 
-if answer == 99999:
-    answer = -1
-print(answer)
+dfs(0, 0)
 
-
-
+print(answer if answer != float('inf') else -1)
