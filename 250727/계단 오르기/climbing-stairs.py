@@ -6,4 +6,4 @@ for i in range(3, N + 1):
     dp.append(0)
     dp[i] = dp[i-2] + dp[i-3]
 
-print(dp[N])
+print(dp[N] % 10007)
