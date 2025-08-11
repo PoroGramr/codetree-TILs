@@ -3,9 +3,7 @@ grid = [list(map(int, input().split())) for _ in range(n)]
 
 dp = [[0 for _ in range(n)] for _ in range(n)]
 
-
-for k in range(n):
-    dp[0][k] = grid[0][k]
+dp[0][0] = grid[0][0]
 
 for i in range(1,n):
     for j in range(n):
