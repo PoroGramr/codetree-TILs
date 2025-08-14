@@ -15,7 +15,7 @@ def calcMax(pins):
     x = [1] * k
 
     for i in range(n):
-        x[pins[i]] += nums[i]
+        x[pins[i] - 1] += nums[i]
     
     for j in x:
         if j >= m:
@@ -29,7 +29,7 @@ def choose(curNum):
         calcMax(data)
         return
 
-    for i in range(1, k):
+    for i in range(1, k + 1):
         data.append(i)
         choose(curNum + 1)
         data.pop()
