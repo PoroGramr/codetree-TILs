@@ -1,29 +1,22 @@
-import sys
+n = int(input())
+grid = [list(map(int, input().split())) for _ in range(n)]
 
-def solve():
-    input = sys.stdin.readline
-    n = int(input().strip())
-    a = [list(map(int, input().split())) for _ in range(n)]
-
-    dp = [[0]*n for _ in range(n)]
-    dp[0][0] = a[0][0]
-
-    # 첫 행
-    for j in range(1, n):
-        dp[0][j] = max(dp[0][j-1], a[0][j])
-
-    # 첫 열
-    for i in range(1, n):
-        dp[i][0] = max(dp[i-1][0], a[i][0])
-
-    # 나머지 칸
-    for i in range(1, n):
-        for j in range(1, n):
-            from_top = max(dp[i-1][j], a[i][j])
-            from_left = max(dp[i][j-1], a[i][j])
-            dp[i][j] = min(from_top, from_left)
-
-    print(dp[n-1][n-1])
+dp = [[0] * n for _ in range(n)]
 
 
-solve()
+dp[0][0] = grid[0][0]
+for i in range(1,n):
+    dp[0][i] = max(grid[0][i], dp[0][i-1])
+
+for i in range(1,n):
+    dp[i][0] = max(grid[i][0], dp[i-1][0])
+
+for y in range(1,n):
+    for x in range(1,n):
+        top = max(grid[y][x], dp[y-1][x])
+        left = max(grid[y][x], dp[y][x-1])
+        minValue = min(top,left)
+        dp[y][x] = minValue
+
+
+print(dp[n-1][n-1])
