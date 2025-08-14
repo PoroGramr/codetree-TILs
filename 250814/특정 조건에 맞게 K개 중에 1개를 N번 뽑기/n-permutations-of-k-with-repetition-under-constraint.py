@@ -10,12 +10,10 @@ def choose(num):
         return
 
     for i in range(1, K + 1):
-        lenNums = len(nums)
-
-        if lenNums >= 2:
-            if nums[lenNums-2] == nums[lenNums-1] and nums[lenNums-1] == i:
+        
+        if len(nums) >= 2:
+            if nums[num-2] == nums[num-3] and nums[num-2] == i:
                 continue
-
         nums.append(i)
         choose(num + 1)
         nums.pop()
