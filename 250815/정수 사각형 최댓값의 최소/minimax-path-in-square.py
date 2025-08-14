@@ -25,5 +25,5 @@ def solve():
 
     print(dp[n-1][n-1])
 
-if __name__ == "__main__":
-    solve()
+
+solve()
