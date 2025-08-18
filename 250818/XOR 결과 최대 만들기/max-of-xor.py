@@ -1,20 +1,25 @@
+
+
 n, m = map(int, input().split())
 A = list(map(int, input().split()))
 
 answer = 0
 
-def dfs(start, depth, xo):
-    # m개를 다 골랐으면 갱신
-    if depth == m:
-        global answer
-        if xo > answer:
-            answer = xo
+arr = []
+def dfs(curNum, start):
+    global answer
+    if curNum == m + 1:
+        res = 0
+        for a in arr:
+            res ^= a
+        if res > answer:
+            answer = res
         return
 
-    # 남은 칸으로 m-depth개를 못 채우면 가지치기
-    # (선택 가능한 시작 인덱스 최댓값은 n - (m - depth))
-    for i in range(start, n - (m - depth) + 1):
-        dfs(i + 1, depth + 1, xo ^ A[i])
+    for i in range(start, n + 1):
+        arr.append(A[i - 1])    # 값 추가 (인덱스 X)
+        dfs(curNum + 1, i + 1)  # 다음 시작은 i+1 (조합)
+        arr.pop()
 
-dfs(0, 0, 0)
+dfs(1, 1)
 print(answer)
