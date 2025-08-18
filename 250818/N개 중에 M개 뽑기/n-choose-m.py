@@ -1,28 +1,15 @@
 N, M = map(int, input().split())
 
-# Please write your code here.
-
 arr = []
 
-def choose(curNum, cnt):
-    if curNum == M + 1:
-        if cnt == M :
-            tmp = sorted(arr)
-            if tmp == arr:
-                for a in arr:
-                    print(a, end =" ")
-                print()
-        
+def dfs(start, depth):
+    if depth == M:
+        print(*arr)
         return
-
-    for i in range(1, N + 1):
-        if i not in arr:
-            arr.append(i)
-            choose(curNum + 1, cnt + 1)
-        else:
-            arr.append(i)
-            choose(curNum + 1, cnt)
+    # 다음 수는 반드시 start 이상 → 자동으로 오름차순, 중복X
+    for i in range(start, N + 1):
+        arr.append(i)
+        dfs(i + 1, depth + 1)
         arr.pop()
 
-
-choose(1,0)
+dfs(1, 0)
