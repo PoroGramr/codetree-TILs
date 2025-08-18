@@ -10,7 +10,6 @@ arr = []
 def dfs(curNum,start):
     global answer 
     if start == m + 1:
-
         res = 0
         for a in arr:
             res ^= a
