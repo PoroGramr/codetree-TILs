@@ -19,7 +19,7 @@ def choose(curNum,start):
     
     for i in range(start,2*n):
         arr1.append(num[i])
-        choose(curNum + 1, start + 1)
+        choose(curNum + 1, i + 1)
         arr1.pop()
 
 
