@@ -8,9 +8,6 @@ for i in range(n):
     for j in range(m):
         for a in range(i + 1,n):
             for b in range(j + 1,m):
-                # if (a== 0 and b == 0) or (a == i and b == j):
-                #     continue
-                # print("i",i,"j",j,"a",a,"b",b)
                 if grid[a][b] > grid[i][j]:
                     dp[a][b] = max(dp[a][b] ,dp[i][j] + 1)
 
