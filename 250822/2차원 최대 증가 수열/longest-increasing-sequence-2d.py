@@ -12,8 +12,8 @@ for i in range(n):
                     dp[a][b] = max(dp[a][b] ,dp[i][j] + 1)
 
 answer = 0
-for y in range(n):
-    for x in range(m):
+for y in range(m):
+    for x in range(n):
         answer = max(dp[y][x], answer)
 
 print(answer)
